@@ -1,0 +1,12 @@
+<div class="form-container mat-elevation-z5">
+    <h1>Login</h1>
+    <form [formGroup]="login" (ngSubmit)="submit()">
+        <mat-form-field>
+            <input matInput placeholder="E-mail" formControlName="email" />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Senha" type="password" formControlName="password" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!login.valid">Login</button>
+    </form>
+</div>

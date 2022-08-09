@@ -1,0 +1,21 @@
+<main>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span>IEAB</span>
+            <span class="example-spacer"></span>
+            <ng-container *ngIf="firebaseService.user$ | async as user">
+                <button mat-button routerLink="/cadastro">
+                <mat-icon>add_circle</mat-icon>
+                Cadastro
+              </button>
+                <button mat-button (click)="logout()">
+                <mat-icon>logout</mat-icon>
+                Logout
+              </button>
+            </ng-container>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</main>
